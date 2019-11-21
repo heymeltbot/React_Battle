@@ -1,5 +1,5 @@
-// const id = "YOUR_CLIENT_ID"
-// const sec = "YOUR_SECRET_ID"
+const id = "YOUR_CLIENT_ID"
+const sec = "YOUR_CLIENT_SECRET"
 const params = `?client_id=${id}&client_secret=${sec}`
 
 function getErrorMsg (message, username){
@@ -11,7 +11,7 @@ function getErrorMsg (message, username){
 }
 
 function getProfile(username){
-    return fetch(`https://api.gethub.com/users/${username}${params}`)
+    return fetch(`https://api.github.com/users/${username}${params}`)
     .then((res) => res.json())
     .then((profile) => {
         if (profile.message){
