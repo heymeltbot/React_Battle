@@ -27,6 +27,7 @@ export default class Results extends React.Component {
             this.setState({
                 error: message,
                 loading: false
+                
             })
         })
     }
